@@ -155,7 +155,7 @@ void TicTacToe::start_game()
 			pboard();
 
 			//You have to make at least 3 moves to win
-			//so it's wasting time to check who won with first 2 moves
+			//so there's no need to check who won in first 2 moves
 			if (turn > 3) { 
 				if (check_status())
 					break;
