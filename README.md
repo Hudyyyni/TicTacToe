@@ -1,2 +1,5 @@
 # TicTacToe
-My version of 2 players TicTacToe, enjoy
+My version of  TicTacToe
+
+NUM pad represents tictactoe fields
+Enjoy the game
