@@ -1,5 +1,4 @@
 # TicTacToe
-My version of  TicTacToe
 
-NUM pad represents tictactoe fields
+Using NUM pad, that represents fields, try to beat your opponent
 Enjoy the game
