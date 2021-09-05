@@ -50,7 +50,7 @@ public:
 	void who_won();
 	
 	//starting game
-	//drawind and generating boards and waiting for players input
+	//drawind and generating board and waiting for players input
 	void start_game();
 	
 };
