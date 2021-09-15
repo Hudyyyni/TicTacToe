@@ -30,10 +30,6 @@ public:
 	//Display our whole board
 	void pboard();
 
-	//if Player1 or Player 2 wins, reset board
-	void reset_board();
-
-
 	//Check whose turn is it now
 	void x_y_turn();
 	
