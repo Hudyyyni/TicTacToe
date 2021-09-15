@@ -37,18 +37,7 @@ void TicTacToe::pboard()
 
 
 }
-void TicTacToe::reset_board()
-{
-	
-	for (int i{ 0 }; i < constants::size; ++i)
-	{
-		for (int j{ 0 }; j < constants::size; ++j)
-		{
-			board[i][j] = ' ';
-		}
-	}
 
-}
 void TicTacToe::x_y_turn()
 {
 	
@@ -138,9 +127,7 @@ void TicTacToe::start_game()
 
 
 
-	do
-	{
-
+	
 		while (true)
 		{
 			//wait 1 sec
@@ -159,12 +146,10 @@ void TicTacToe::start_game()
 			if (turn > 3) { 
 				if (check_status())
 					break;
-			}
+				      }
 		}
 		who_won();
-		std::cin >> this->play_again;
-		reset_board();
-	} while (this->play_again == 'y');
+	
 
 }
 
