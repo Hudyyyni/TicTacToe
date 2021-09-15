@@ -16,8 +16,7 @@ private:
 	int turn;
 	char x;
 	char y;
-	char play_again;
-
+	
 
 public:
 
