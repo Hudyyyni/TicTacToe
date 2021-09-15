@@ -10,7 +10,7 @@ TicTacToe::TicTacToe()
 	this->turn = 0;
 	this->x = 'X';
 	this->y = 'O';
-	this->play_again = 'y';
+	
 
 }
 TicTacToe::~TicTacToe()
@@ -119,7 +119,7 @@ void TicTacToe::who_won()
 	else if (turn % 2 != 0)
 		std::cout << "X won" << '\n';
 
-	std::cout << "Wanna play again? y/n ";
+	
 }
 void TicTacToe::start_game()
 {
