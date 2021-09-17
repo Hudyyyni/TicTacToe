@@ -10,7 +10,7 @@ TicTacToe::TicTacToe()
 	this->turn = 0;
 	this->x = 'X';
 	this->y = 'O';
-	
+	this->play_again = 'y';
 
 }
 TicTacToe::~TicTacToe()
@@ -83,8 +83,6 @@ void TicTacToe::x_y_turn()
 bool TicTacToe::check_status()
 {
 	
-	if (this->turn == 9)
-		return true;
 	if ((board[0][0] == this->x) && (board[0][1] == this->x) && (board[0][2] == this->x) || (board[0][0] == this->y) && (board[0][1] == this->y) && (board[0][2] == this->y))
 		return true;
 	else if ((board[1][0] == this->x) && (board[1][1] == this->x) && (board[1][2] == this->x) || (board[1][0] == this->y) && (board[1][1] == this->y) && (board[1][2] == this->y))
@@ -101,8 +99,7 @@ bool TicTacToe::check_status()
 		return true;
 	else if ((board[0][0] == this->x) && (board[1][1] == this->x) && (board[2][2] == this->x) || (board[0][0] == this->y) && (board[1][1] == this->y) && (board[2][2] == this->y))
 		return true;
-
-	else
+	
 		return false;
 
 
@@ -112,13 +109,15 @@ bool TicTacToe::check_status()
 
 void TicTacToe::who_won()
 {
-	if (turn == 9)
+	if (turn == 9 && check_status() == false)
 		std::cout << "Draw" << '\n';
 	else if (turn % 2 == 0)
 		std::cout << "O won" << '\n';
 	else if (turn % 2 != 0)
 		std::cout << "X won" << '\n';
-
+	else
+		std::cout << "Draw";
+	
 	
 }
 void TicTacToe::start_game()
@@ -128,6 +127,8 @@ void TicTacToe::start_game()
 
 
 	
+	
+
 		while (true)
 		{
 			//wait 1 sec
@@ -142,11 +143,11 @@ void TicTacToe::start_game()
 			pboard();
 
 			//You have to make at least 3 moves to win
-			//so there's no need to check who won in first 2 moves
+			//so it's wasting time to check who won with first 2 moves
 			if (turn > 3) { 
-				if (check_status())
+				if (check_status() || turn == 9)
 					break;
-				      }
+			}
 		}
 		who_won();
 	
