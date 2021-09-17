@@ -16,7 +16,8 @@ private:
 	int turn;
 	char x;
 	char y;
-	
+	char play_again;
+
 
 public:
 
@@ -28,6 +29,9 @@ public:
 	
 	//Display our whole board
 	void pboard();
+
+	
+
 
 	//Check whose turn is it now
 	void x_y_turn();
@@ -45,7 +49,7 @@ public:
 	void who_won();
 	
 	//starting game
-	//drawind and generating board and waiting for players input
+	//drawind and generating boards and waiting for players input
 	void start_game();
 	
 };
