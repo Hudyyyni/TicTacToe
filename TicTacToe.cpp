@@ -10,7 +10,7 @@ TicTacToe::TicTacToe()
 	this->turn = 0;
 	this->x = 'X';
 	this->y = 'O';
-	this->play_again = 'y';
+	
 
 }
 TicTacToe::~TicTacToe()
